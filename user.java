@@ -8,7 +8,7 @@ public class UserPage {
         System.out.print("Enter Name: ");
         String name = scanner.nextLine();  // Read user input for name
         
-        //Makesure both name and dob are provided
+        //Makesure name is provided
         if (name.isEmpty()) {
             System.out.println("Error!!!!\nName  is required.");
         } else {
