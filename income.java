@@ -11,10 +11,52 @@ public class income {
 
         for (int i = 1; i <= count; i++) {
             System.out.print("Enter income for source " + i + ": ");
-            double income = scanner.nextDouble();
-            totalIncome += income;
+            totalIncome += scanner.nextDouble();
+            //totalIncome += income;
         }
 
+        System.out.print("Rent: ");
+        double rent = scanner.nextDouble();
+
+        System.out.print("Groceries: ");
+        double groceries = scanner.nextDouble();
+
+        System.out.print("Tution: ");
+        double tution = scanner.nextDouble();
+
+        System.out.print("Shopping: ");
+        double shopping = scanner.nextDouble();
+
+        System.out.print("Commute: ");
+        double commute = scanner.nextDouble();
+
+        System.out.print("Recreation: ");
+        double recreation = scanner.nextDouble();
+
+        System.out.print("Remaining(other stuff): ");
+        double remaining = scanner.nextDouble();
+        
+        ExpenseTracker expenses = new ExpenseTracker(rent, groceries, tution, shopping, recreation, commute, remaining);
+
+        double totalSpent = rent + groceries + tution + shopping + commute + recreation + remaining;
+        double saving = totalIncome - totalSpent;
+
+        if (saving < 0) {
+            System.out.println("\n Warning: YOU ARE OVERSPENDING!");
+            saving = 0;
+        }
+
+        if (saving > 0) {
+            System.out.println("\n Great Job: you are doing great1!");
+            saving = 0;
+        }
+
+        expenses.setSaving(saving);
         System.out.println("Your total income is: $" + totalIncome);
+        System.out.println("Your total expense are: $" + expenses.totalExpensesExcludingSaving());
+        System.out.println("Saving: " + saving);
+
     }
+
 }
+//there is a issue with displaying the saving...
