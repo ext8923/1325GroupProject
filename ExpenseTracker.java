@@ -1,6 +1,6 @@
 public class ExpenseTracker {
 
-    double rent, groceries, tution, shopping, recreation, commute, remaining ;
+    double rent, groceries, tution, shopping, recreation, commute, health, remaining ;
     private double saving;
 
     public ExpenseTracker(double rent, double groceries, double tution, double shopping, double recreation,
