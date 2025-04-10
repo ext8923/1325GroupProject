@@ -1,9 +1,52 @@
 import java.util.Scanner;
 
-public class ExpensePage {
+public class expense {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("How many expenses would you like to enter? ");
+        System.out.print("Enter expenses in following fields \n");
+
+        System.out.print("Rent: $");
+        double rent = scanner.nextDouble();
+
+        System.out.print("Groceries: $");
+        double groceries = scanner.nextDouble();
+
+        System.out.print("Tution: $");
+        double tution = scanner.nextDouble();
+
+        System.out.print("Shopping: $");
+        double shopping = scanner.nextDouble();
+
+        System.out.print("Commute: $");
+        double commute = scanner.nextDouble();
+
+        System.out.print("Recreation: $");
+        double recreation = scanner.nextDouble();
+
+        System.out.print("Health: $");
+        double health = scanner.nextDouble();
+
+        
+        ExpenseTracker expenses = new ExpenseTracker(rent, groceries, tution, shopping, recreation, commute, health);
+
+        double totalSpent = rent + groceries + tution + shopping + commute + recreation ;
+        //double saving = totalIncome - totalSpent;  // should be in report
+
+        /*if (saving < 0) {
+            System.out.println("\n Warning: YOU ARE OVERSPENDING!");
+            saving = 0;
+        }
+
+        if (saving > 0) {
+            System.out.println("\n Great Job: you are doing great1!");
+        }*/
+
+        //expenses.setSaving(saving); // should be in report
+        //System.out.println("Your total expense are: $" + totalSpent);
+        //System.out.println("Saving: " + expenses.getSaving()); // should be in report
+
+
+        System.out.print("How many more expenses would you like to enter? ");
         int numberOfExpenses = scanner.nextInt();
         scanner.nextLine(); // Consume the leftover newline
 
@@ -30,12 +73,12 @@ public class ExpensePage {
         for (double amount : amounts) {
             total += amount;
         }
-
+        total=total+totalSpent;
         // Displaying all expenses
-        System.out.println("\n--- Expense Summary ---");
-        for (int i = 0; i < numberOfExpenses; i++) {
-            System.out.printf("%d. %s - $%.2f\n", (i + 1), descriptions[i], amounts[i]);
-        }
+        // System.out.println("\n--- Expense Summary ---");
+        // for (int i = 0; i < numberOfExpenses; i++) {
+        //     System.out.printf("%d. %s - $%.2f\n", (i + 1), descriptions[i], amounts[i]);
+        // }
 
        
         System.out.printf("Total Expenses: $%.2f\n", total);
