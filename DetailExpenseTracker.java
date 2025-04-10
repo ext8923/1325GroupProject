@@ -4,8 +4,8 @@ public class DetailExpenseTracker extends ExpenseTracker{
   }
 
   @Override
-  public double totalExpenseWithoutSaving(){
-    return super.totalExpenseWithoutSaving();
+  public double totalExpenseExcludingSaving(){
+    return super.totalExpenseExcludingSaving();
   }
 }
   
