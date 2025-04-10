@@ -48,13 +48,12 @@ public class income {
 
         if (saving > 0) {
             System.out.println("\n Great Job: you are doing great1!");
-            saving = 0;
         }
 
         expenses.setSaving(saving);
         System.out.println("Your total income is: $" + totalIncome);
-        System.out.println("Your total expense are: $" + expenses.totalExpensesExcludingSaving());
-        System.out.println("Saving: " + saving);
+        System.out.println("Your total expense are: $" + totalSpent);
+        System.out.println("Saving: " + expenses.getSaving());
 
     }
 
