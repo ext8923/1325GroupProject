@@ -2,6 +2,6 @@ all:
 	javac */*.java
 
 run: 
-	java */*.class
+	java app.main
 clean:
 	rm */*.class
