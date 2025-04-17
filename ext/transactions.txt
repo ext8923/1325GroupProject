@@ -1,0 +1,2 @@
+INCOME,1,2025-04-17,100.0,Starting amount,gift,false
+INCOME,2,2025-04-16,500.0,spent,salary,true

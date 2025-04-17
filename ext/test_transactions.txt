@@ -1,0 +1,4 @@
+INCOME,1,2025-04-17,1000.0,Monthly Salary,Employer,true
+INCOME,2,2025-04-17,50.0,Bank Interest,Bank,true
+EXPENSE,3,2025-04-17,500.0,Rent Payment,Housing,true
+EXPENSE,4,2025-04-17,75.5,Grocery Shopping,Food,false
