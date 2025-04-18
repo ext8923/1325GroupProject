@@ -3,5 +3,8 @@ all:
 
 run: 
 	java app.Main
+
+test:
+	java test.TestExpensesTracker
 clean:
-	rm */*.class
+	rm */*.class -f
