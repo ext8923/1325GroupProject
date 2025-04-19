@@ -4,7 +4,6 @@ public class DetailExpenseTracker extends ExpenseTracker {
         super(rent, groceries, tuition, shopping, recreation, commute, health);
     }
 
-    @Override
     public double totalExpenseExcludingSaving() {
         double total = super.totalExpensesExcludingSaving();
         double savings = getSaving();  // Ensure this method exists in ExpenseTracker

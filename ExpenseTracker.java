@@ -1,8 +1,8 @@
-public class DetailExpenseTracker extends Finance {
-    double rent, groceries, tuition, shopping, recreation, commute, health, remaining;
+public class ExpenseTracker extends Finance {
+    double rent, groceries, tuition, shopping, recreation, commute, health;
 
-    public DetailExpenseTracker(double rent, double groceries, double tuition, double shopping, double recreation, 
-                                double commute, double health, double remaining) {
+    public ExpenseTracker(double rent, double groceries, double tuition, double shopping, double recreation, 
+                                double commute, double health) {
         this.rent = rent;
         this.groceries = groceries;
         this.tuition = tuition;
@@ -10,7 +10,6 @@ public class DetailExpenseTracker extends Finance {
         this.recreation = recreation;
         this.commute = commute;
         this.health = health;
-        this.remaining = remaining;
     }
 
     public double totalExpensesExcludingSaving() {
