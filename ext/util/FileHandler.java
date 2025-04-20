@@ -107,16 +107,22 @@ public class FileHandler {
         double amount = Double.parseDouble(parts[3]);
         String description = parts[4];
         
+        Transaction transaction = null;
+        
         if (type.equals("EXPENSE") && parts.length >= 7) {
             String category = parts[5];
             boolean isTaxDeductible = Boolean.parseBoolean(parts[6]);
-            return new Expense(date, amount, description, category, isTaxDeductible);
+            transaction = new Expense(date, amount, description, category, isTaxDeductible);
+            transaction.setId(id);  // Set the ID from the file
         } else if (type.equals("INCOME") && parts.length >= 7) {
             String source = parts[5];
             boolean isTaxable = Boolean.parseBoolean(parts[6]);
-            return new Income(date, amount, description, source, isTaxable);
+            transaction = new Income(date, amount, description, source, isTaxable);
+            transaction.setId(id);  // Set the ID from the file
         } else {
             throw new InvalidTransactionException("Unknown transaction type: " + type);
         }
+        
+        return transaction;
     }
 }

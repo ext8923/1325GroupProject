@@ -112,7 +112,9 @@ public class TransactionManager {
             if (transactions.get(i).getId() == id) {
                 transactions.remove(i);
                 updateRecentTransactions();
-                return true;
+                // Save changes to file after deletion
+                boolean saved = saveTransactions();
+                return saved; // Return true only if both removal and saving succeeded
             }
         }
         return false;

@@ -5,6 +5,7 @@ run:
 	java app.Main
 
 test:
-	java test.TestExpensesTracker
+	java test.TestExpenseTracker
+	
 clean:
 	rm */*.class -f

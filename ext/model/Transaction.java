@@ -53,6 +53,19 @@ public abstract class Transaction {
         return id;
     }
     
+    /**
+     * Set the transaction ID and update the counter if necessary
+     * 
+     * @param id The ID to set
+     */
+    public void setId(int id) {
+        this.id = id;
+        // Update counter if this ID is higher
+        if (id >= counter) {
+            counter = id + 1;
+        }
+    }
+    
     // Abstract methods to be implemented by child classes
     public abstract double calculateTax();
     
